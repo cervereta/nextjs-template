@@ -1,0 +1,98 @@
+INSTRUCCIONES PARA USAR EL TEMPLATE NEXT.JS GLOBALMENTE
+=========================================================
+
+📋 PASOS PARA HACER EL SCRIPT GLOBAL EN UBUNTU
+
+1. Abrir terminal y navegar al directorio del script:
+   cd /home/cervereta/Documentos/nextjs-template
+
+2. Copiar el script al directorio global:
+   sudo cp generate-template.js /usr/local/bin/create-nextjs-template
+
+3. Dar permisos de ejecución:
+   sudo chmod +x /usr/local/bin/create-nextjs-template
+
+4. Verificar que funciona:
+   create-nextjs-template --help
+
+🚀 CÓMO USAR EL TEMPLATE GLOBALMENTE
+
+Una vez configurado, puedes crear proyectos desde cualquier carpeta:
+
+# Ejemplos de uso:
+cd ~/Escritorio
+create-nextjs-template mi-app-web
+
+cd ~/Documentos/proyectos  
+create-nextjs-template tienda-online
+
+cd /tmp
+create-nextjs-template prueba-rapida
+
+📋 PASOS DESPUÉS DE CREAR UN PROYECTO
+
+1. cd nombre-del-proyecto
+2. npm install
+3. npm run dev
+
+El proyecto estará disponible en: http://localhost:3000
+
+🎯 BENEFICIOS DEL SCRIPT GLOBAL
+
+✅ Accesible desde cualquier directorio
+✅ No necesitas recordar rutas completas  
+✅ Comando corto y fácil de recordar
+✅ Workflow más rápido para nuevos proyectos
+
+📜 SCRIPTS DISPONIBLES EN CADA PROYECTO
+
+- npm run dev          - Servidor de desarrollo
+- npm run build        - Build para producción  
+- npm run start        - Servidor de producción
+- npm run lint         - Ejecuta ESLint
+- npm run lint:fix     - Arregla problemas de ESLint
+- npm run type-check   - Verifica tipos TypeScript
+- npm run format       - Formatea código con Prettier
+- npm run format:check - Verifica formato del código
+
+🔧 FLUJO DE VALIDACIÓN RECOMENDADO
+
+Antes de commits importantes:
+1. npm run type-check
+2. npm run lint:fix
+3. npm run format
+4. npm run build
+
+✨ CARACTERÍSTICAS DEL TEMPLATE
+
+- ⚡ Next.js 14 con App Router
+- 🔷 TypeScript con configuración strict
+- 🎨 Tailwind CSS
+- ⚙️ ESLint + Prettier configurados
+- 📁 Estructura organizada
+- 🧩 Componentes base incluidos (Button, Card, LoadingSpinner)
+- 🪝 Hooks personalizados (useLocalStorage)
+- 🎯 Alias de imports (@/)
+- 🔧 Configuración VS Code optimizada
+
+📁 ESTRUCTURA GENERADA
+
+src/
+├── app/                 # App Router (páginas y layouts)
+├── components/          # Componentes reutilizables
+│   ├── ui/             # Componentes de interfaz básicos
+│   ├── Layout/         # Componentes de layout
+│   └── Common/         # Componentes comunes
+├── hooks/              # Hooks personalizados
+├── lib/                # Funciones auxiliares y constantes
+└── types/              # Tipos TypeScript globales
+
+⚙️ CONFIGURACIÓN DE VARIABLES DE ENTORNO
+
+1. Copia .env.local.example como .env.local
+2. Configura tus variables de entorno
+
+=========================================================
+Generado: agosto 2024
+Template Next.js 14 con TypeScript y Tailwind CSS
+=========================================================
